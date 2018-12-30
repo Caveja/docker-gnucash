@@ -50,9 +50,9 @@ RUN cd gnucash &&\
     cd build-gnucash &&\
     export GTEST_ROOT=/googletest/googletest &&\
     export GMOCK_ROOT=/googletest/googlemock &&\
-    cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr/local ../gnucash &&\
+    cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr ../gnucash &&\
     ninja &&\
     ninja install &&\
     cd .. && rm -rf gnucash build-gnucash
 
-ENTRYPOINT ["/usr/local/bin/gnucash", "--logto", "stderr"]
+ENTRYPOINT ["/usr/bin/gnucash", "--logto", "stderr"]
