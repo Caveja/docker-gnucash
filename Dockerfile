@@ -12,7 +12,9 @@ RUN apt-get update &&\
         libblkid-dev \
         libboost-all-dev \
         libgtest-dev \
+        libgwengui-gtk3-dev \
         libgwenhywfar60-dev \
+        libofx-dev \
         libwebkit2gtk-4.0-dev \
         libxslt1-dev \
         guile-2.0-dev \
