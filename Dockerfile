@@ -5,6 +5,9 @@ RUN apt-get update &&\
     apt-get clean && \
     rm -r /var/lib/apt/lists/*
 
+RUN git clone https://github.com/google/googletest.git &&\
+    git clone https://github.com/Gnucash/gnucash.git
+
 RUN apt-get update &&\
     apt-get -y install \
         build-essential \
@@ -31,14 +34,16 @@ RUN apt-get update &&\
     rm -r /var/lib/apt/lists/*
 
 
-RUN git clone https://github.com/google/googletest.git &&\
-    cd googletest &&\
+RUN cd googletest &&\
+    git pull &&\
     mkdir mybuild &&\
     cd mybuild &&\
     cmake -DBUILD_GMOCK=ON ../ &&\
     make
 
-RUN git clone https://github.com/Gnucash/gnucash.git &&\
+RUN cd gnucash &&\
+    git pull &&\
+    cd .. &&\
     mkdir build-gnucash &&\
     cd build-gnucash &&\
     export GTEST_ROOT=/googletest/googletest &&\
