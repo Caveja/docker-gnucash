@@ -44,7 +44,10 @@ RUN cd googletest &&\
     make
 
 RUN cd gnucash &&\
-    git pull &&\
+    git fetch &&\
+    git checkout 3.4 &&\
+    git reset --hard &&\
+    git clean -fd &&\
     cd .. &&\
     mkdir build-gnucash &&\
     cd build-gnucash &&\
