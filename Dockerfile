@@ -12,6 +12,7 @@ RUN apt-get update &&\
         e2fslibs-dev \
         libboost-all-dev \
         libaudit-dev \
+        libxslt1-dev \
         && \
     apt clean && \
     rm -r /var/lib/apt/lists/*
