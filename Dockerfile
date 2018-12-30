@@ -13,7 +13,7 @@ RUN apt-get update &&\
         libboost-all-dev \
         libaudit-dev \
         libxslt1-dev \
-        guile-library \
+        guile-2.0-dev \
         && \
     apt clean && \
     rm -r /var/lib/apt/lists/*
