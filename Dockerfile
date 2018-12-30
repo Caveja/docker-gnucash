@@ -1,7 +1,12 @@
 FROM ubuntu:bionic
 
 RUN apt-get update &&\
-    apt-get -y install git\
+    apt-get -y install git &&\
+    apt clean && \
+    rm -r /var/lib/apt/lists/*
+
+RUN apt-get update &&\
+    apt-get -y install \
         build-essential \
         cmake \
         ninja-build \
