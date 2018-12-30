@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
 RUN apt-get update &&\
-    apt-get -y build-dep gnucash &&\
     apt-get -y install git\
         build-essential \
         cmake \
