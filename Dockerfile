@@ -18,6 +18,7 @@ RUN apt-get update &&\
         libwebkit2gtk-4.0-dev \
         libxslt1-dev \
         guile-2.0-dev \
+        xsltproc \
         && \
     apt clean && \
     rm -r /var/lib/apt/lists/*
