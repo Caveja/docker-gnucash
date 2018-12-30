@@ -6,14 +6,15 @@ RUN apt-get update &&\
         cmake \
         ninja-build \
         swig \
-        libwebkit2gtk-4.0-dev \
-        libgtest-dev \
-        libblkid-dev \
         e2fslibs-dev \
-        libboost-all-dev \
+        libaqbanking-dev \
         libaudit-dev \
-        libxslt1-dev \
+        libblkid-dev \
+        libboost-all-dev \
+        libgtest-dev \
         libgwenhywfar60-dev \
+        libwebkit2gtk-4.0-dev \
+        libxslt1-dev \
         guile-2.0-dev \
         && \
     apt clean && \
