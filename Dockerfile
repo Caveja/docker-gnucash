@@ -1,8 +1,5 @@
 FROM ubuntu:bionic
 
-RUN git clone https://github.com/google/googletest.git &&\
-    git clone https://github.com/Gnucash/gnucash.git
-
 RUN apt-get update &&\
     apt-get -y install git\
         build-essential \
@@ -27,17 +24,15 @@ RUN apt-get update &&\
     apt clean && \
     rm -r /var/lib/apt/lists/*
 
-RUN cd googletest &&\
-    git pull &&\
+
+RUN git clone https://github.com/google/googletest.git &&\
     cd googletest &&\
     mkdir mybuild &&\
     cd mybuild &&\
     cmake -DBUILD_GMOCK=ON ../ &&\
     make
 
-RUN cd gnucash &&\
-    git pull &&\
-    cd .. &&\
+RUN git clone https://github.com/Gnucash/gnucash.git &&\
     mkdir build-gnucash &&\
     cd build-gnucash &&\
     export GTEST_ROOT=/googletest/googletest &&\
