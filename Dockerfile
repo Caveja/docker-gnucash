@@ -54,3 +54,5 @@ RUN cd gnucash &&\
     ninja &&\
     ninja install &&\
     cd .. && rm -rf gnucash build-gnucash
+
+ENTRYPOINT ["/usr/local/bin/gnucash", "--logto", "stderr"]
