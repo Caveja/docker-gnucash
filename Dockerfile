@@ -11,6 +11,7 @@ RUN apt-get update &&\
         libaudit-dev \
         libblkid-dev \
         libboost-all-dev \
+        libdbi-dev \
         libgtest-dev \
         libgwengui-gtk3-dev \
         libgwenhywfar60-dev \
