@@ -19,6 +19,7 @@ RUN apt-get update &&\
         libgwenhywfar60-dev \
         libofx-dev \
         libwebkit2gtk-4.0-dev \
+        libxml2-utils \
         libxslt1-dev \
         guile-2.0-dev \
         xsltproc \
