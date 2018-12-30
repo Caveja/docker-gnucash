@@ -13,6 +13,7 @@ RUN apt-get update &&\
         libboost-all-dev \
         libaudit-dev \
         libxslt1-dev \
+        libgwenhywfar60-dev \
         guile-2.0-dev \
         && \
     apt clean && \
