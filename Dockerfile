@@ -2,7 +2,7 @@ FROM ubuntu:bionic
 
 RUN apt-get update &&\
     apt-get -y install git &&\
-    apt clean && \
+    apt-get clean && \
     rm -r /var/lib/apt/lists/*
 
 RUN apt-get update &&\
@@ -27,7 +27,7 @@ RUN apt-get update &&\
         guile-2.0-dev \
         xsltproc \
         && \
-    apt clean && \
+    apt-get clean && \
     rm -r /var/lib/apt/lists/*
 
 
