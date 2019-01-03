@@ -15,6 +15,7 @@ RUN apt-get update &&\
         ninja-build \
         swig \
         e2fslibs-dev \
+        dbus-x11 \
         libaqbanking-dev \
         libaudit-dev \
         libblkid-dev \
